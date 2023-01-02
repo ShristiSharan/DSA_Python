@@ -38,8 +38,7 @@ if __name__ == "__main__":
     sol = Solution()
     s = "abc"
     t = "abhcd"
-    # print(sol.isIsomorphic(s, t))
-    print(s)
+    print(sol.isIsomorphic(s, t))
 
 
         
