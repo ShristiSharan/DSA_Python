@@ -34,6 +34,7 @@ class Solution:
 # t = "abhcd"
 # print(sol.isIsomorphic(s, t))
 
+
 if __name__ == "__main__":
     sol = Solution()
     s = "abc"
