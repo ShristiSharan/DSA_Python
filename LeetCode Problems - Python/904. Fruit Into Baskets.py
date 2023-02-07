@@ -1,7 +1,6 @@
 class Solution(object):
 
-    from collections import defaultdict   
-#Defaultdict is a container like dictionaries present in the module collections
+    from collections import defaultdict   ##Defaultdict is a container like dictionaries present in the module collections
     def totalFruit(self, fruits):
         """
         :type fruits: List[int]
