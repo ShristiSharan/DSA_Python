@@ -25,3 +25,38 @@ def merge_sort(a):
     return left_count + right_count + merge_count, ans
     
 print(merge_sort(arr)[0])
+
+
+#Another approach in pyhton using def and merge sort:
+
+inversion = 0
+
+def merge(a, b):
+    global inversion
+    apointer, bpointer = 0, 0
+    toreturn = []
+    while apointer < len(a) and bpointer < len(b):
+        if a[apointer] <= b[bpointer]:
+            toreturn.append(a[apointer])
+            apointer += 1
+        else:
+            inversion += len(a) - apointer
+            toreturn.append(b[bpointer])
+            bpointer += 1
+    toreturn += a[apointer:]
+    toreturn += b[bpointer:]
+    return toreturn
+
+def mergesort(a):
+    if len(a) == 1:
+        return a
+    mid = len(a) // 2
+    b = mergesort(a[:mid])
+    c = mergesort(a[mid:])
+    return merge(b, c)
+
+n = int(input())
+a = list(map(int, input().split()))
+
+mergesort(a)
+print(inversion)
